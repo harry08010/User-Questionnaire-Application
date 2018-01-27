@@ -2,7 +2,7 @@ const express = require('express'); // import in the express library (common JS 
 const app = express(); // generate a new application representing a running express app (listen to request and route to Routes)
 
 app.get('/', (req, res) => {
-    res.send({ hi: 'there' });
+    res.send({ bye: 'buddy' });
 }); // a route handler
 
 const PORT = process.env.PORT || 5000; // const name is capitalized so that the value should not be changed lightly!
