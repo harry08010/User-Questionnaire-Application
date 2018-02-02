@@ -1,6 +1,11 @@
 const express = require('express'); // import in the express library (common JS module in server side)
-require('./services/passport');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
 const authRoutes = require('./routes/authRoutes');
+require('./models/User');
+require('./services/passport'); // the order of "require" is important, first define model then use it
+
+mongoose.connect(keys.mongoURI);
 
 const app = express(); // generate a new application representing a running express app (listen to request and route to Routes)
 
