@@ -1,8 +1,8 @@
 // dev credentials or prod credentials control
 if (process.env.NODE_ENV === 'production') {
-    // production
-    module.exports = require('./prod');
+  // production
+  module.exports = require('./prod');
 } else {
-    // development
-    module.exports = require('./dev');
+  // development
+  module.exports = require('./dev');
 }
